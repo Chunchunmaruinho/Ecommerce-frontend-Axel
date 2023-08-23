@@ -1,3 +1,27 @@
 body {
-    background-color: black;
+    display: inline-flex;
+    padding: 2rem 7.5rem 9.4375rem 5.6875rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3.5rem;
+    background: #222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    width: 11.3125rem;
+   height: 4.1875rem;
+}
+
+
+.wrapper-icons{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
 }
