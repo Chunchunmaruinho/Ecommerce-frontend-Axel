@@ -1,27 +1,148 @@
 body {
-    display: inline-flex;
-    padding: 2rem 7.5rem 9.4375rem 5.6875rem;
+    padding: 2rem 7.5rem 9.4rem 5.7rem;
+    background-color: #222;
+}
+
+
+header {
+    padding-bottom: 3.5rem;
+}
+
+.mainheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+
+main {
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 3.5rem;
-    background: #222;
 }
 
-nav {
+
+.destacados {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+.oferta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 18px;
+}
+
+
+.oferta {
+    display: flex;
+    width: 100%;
+}
+
+
+.card {
+    display: grid;
+   grid-template-rows: 300px 53px ;
+    width: 285px;
+    height: 353px;
+    flex-shrink: 0;
+    background-color: rebeccapurple;
+    border-radius: 3.5%;
+}
+
+
+h2 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%
+}
+
+
+.imgHerramienta {
+    margin-left: 40px;
+}
+
+
+.card-title {
+    color: var(--black, #000);
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 120%; 
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+
+.identifier {
+    color: #808080;
+    font-family: Rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; 
+    opacity: 0.7;
+    margin-left: 20px;
+}
+
+
+p {
+    margin: 0;
+}
+
+
+.old-price {
+    color: #808080;
+    text-align: right;
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+    text-decoration-line: line-through;
+    margin-right: 20px;
+}
+
+
+.new-price {
+    color: var(--red, #941B0C);
+    text-align: right;
+    font-family: Rubik;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+    margin-right: 20px;
+}
+
+
+.card-buttom {
+    display: flex;
     align-items: center;
+    gap: 3px;
+    margin-left: 20px;
+    margin-bottom: 25px;
 }
 
 
-.logo {
-    width: 11.3125rem;
-   height: 4.1875rem;
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+:root { font-family: 'Inter var', sans-serif; }
 }
 
-
-.wrapper-icons{
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-}
+@import url('https://fonts.cdnfonts.com/css/rubik');
