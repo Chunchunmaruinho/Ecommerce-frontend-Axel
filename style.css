@@ -37,6 +37,13 @@ main {
 }
 
 
+.novedades {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
 .products {
     display: flex;
     flex-direction: row;
@@ -53,12 +60,32 @@ main {
 
 .card {
     display: grid;
-   grid-template-rows: 300px 53px ;
+    grid-template-rows: 300px 53px ;
     width: 285px;
-    height: 353px;
+    height: 362px;
     flex-shrink: 0;
-    background-color: rebeccapurple;
-    border-radius: 3.5%;
+    background-color: transparent;
+}
+
+
+ .card-base {
+    background-color: #FFFFFF;
+    height: 286px;
+    border-radius: 0.5em 0.5em 0em 0.5em;
+}
+
+
+.ofertaP .card-base {
+    background-color: #FFD100;
+    height: 286px;
+    border-radius: 0.5em 0.5em 0em 0.5em;
+}
+
+
+.card-order {
+    display: flex;
+    height: 76px;
+    border-bottom-right-radius: 0.5em;
 }
 
 
@@ -73,8 +100,29 @@ h2 {
 
 
 .imgHerramienta {
+    position: relative;
     margin-left: 40px;
 }
+
+.imgDescuento {
+    position: absolute;
+    margin-left: -45px;
+}
+
+
+.ofertaLabel {
+    position: absolute;
+    margin-left: 225px;
+    margin-top: -114px;
+    color: var(--white, #FFF);
+    font-family: Rubik;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%
+}
+
+
 
 
 .card-title {
@@ -86,7 +134,10 @@ h2 {
     line-height: 120%; 
     text-transform: capitalize;
     margin-left: 20px;
+    margin-right: 20px;
 }
+
+
 
 
 .identifier {
@@ -116,6 +167,7 @@ p {
     line-height: 120%; 
     text-decoration-line: line-through;
     margin-right: 20px;
+    border-bottom-left-radius: 0.5em;
 }
 
 
@@ -135,8 +187,37 @@ p {
     display: flex;
     align-items: center;
     gap: 3px;
-    margin-left: 20px;
-    margin-bottom: 25px;
+    width: 76px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+
+.card-price {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: auto;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    height: 76px;
+    width: 209px;
+    background-color: #FFFFFF;
+
+}
+
+
+.ofertaP .card-price {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: auto;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    height: 76px;
+    width: 209px;
+    background-color: #FFD100;
+
 }
 
 
