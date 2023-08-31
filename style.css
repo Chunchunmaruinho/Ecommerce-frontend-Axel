@@ -52,6 +52,15 @@ main {
 }
 
 
+
+.productsNovedades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:18px;
+}
+
+
 .oferta {
     display: flex;
     width: 100%;
@@ -68,10 +77,27 @@ main {
 }
 
 
+.card-Novedades {
+    display: grid;
+    width: 589px;
+
+}
+
+
  .card-base {
+    position: relative;
     background-color: #FFFFFF;
     height: 286px;
     border-radius: 0.5em 0.5em 0em 0.5em;
+}
+
+
+.card-base-Novedades {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    height: 224px;
+    width: 589px;
 }
 
 
@@ -87,6 +113,35 @@ main {
     height: 76px;
     border-bottom-right-radius: 0.5em;
 }
+
+
+.card-order-Novedades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 62px;
+    width: 589px;
+    background-color: #FFFFFF;
+}
+
+
+.delivery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+
+.cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
 
 
 h2 {
@@ -106,7 +161,7 @@ h2 {
 
 .imgDescuento {
     position: absolute;
-    margin-left: -45px;
+    right: -10px;    
 }
 
 
