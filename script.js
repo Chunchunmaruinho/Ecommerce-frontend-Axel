@@ -1,20 +1,13 @@
-const PRODUCTO_DESTACADO = {
-    imgProducto:  '1',
-    cardTitle: 'Pala' ,
-    identifier: '111',
-    prices: {    
-        oldPrice: '$10',
-        newPrice: '$10'
-    }
-}
+function createCard(PRODUCTO_DESTACADO) {
+    const {
+    imgProducto =  'images/productos/DestacadosDesktop.png',
+    desProducto ='Alt producto' ,
+    cardTitle = 'Nombre del producto' ,
+    identifier = 'identificador',    
+    oldPrice = '$Precio Antiguo',
+    newPrice = '$Precio Actual'   
+    } = PRODUCTO_DESTACADO;
 
-
-let productos = [
-    PRODUCTO_DESTACADO
-]
-
-
-function createCard() {
     const card = document.createElement('div');
     card.className = 'card'; 
 
@@ -24,34 +17,34 @@ function createCard() {
     card.appendChild(cardBase);
    
 
-    const imgProducto = document.createElement('img');
-    imgProducto.className =  'imgProducto';  
-    imgProducto.src = 'images/productos/DestacadosDesktop.png'; 
-    imgProducto.alt = 'Description of the image';  
+    const imgProductoI = document.createElement('img');
+    imgProductoI.className =  'imgProducto';  
+    imgProductoI.src = imgProducto; 
+    imgProducto.alt = desProducto; 
     
 
-    const cardTitle = document.createElement('h3');
-    cardTitle.className = 'card-title';
-    cardTitle.textContent = 'Lorem Ipsum Dolor Sit asd Consectetur';
+    const cardTitleH = document.createElement('h3');
+    cardTitleH.className = 'card-title';
+    cardTitleH.textContent = cardTitle;
    
 
-    const identifier = document.createElement('p');
-    identifier.className = 'identifier';
-    identifier.textContent = '1231234'
+    const identifierP = document.createElement('p');
+    identifierP.className = 'identifier';
+    identifierP.textContent = identifier;
     
 
-    const oldPrice = document.createElement('p');
-    oldPrice.className = 'old-price';
-    oldPrice.textContent = '$2';
+    const oldPriceP = document.createElement('p');
+    oldPriceP.className = 'old-price';
+    oldPriceP.textContent = oldPrice;
 
     const cardOrder = document.createElement('div');
     cardOrder.className = 'card-order';
 
 
-    cardBase.appendChild(imgProducto);
-    cardBase.appendChild(cardTitle);
-    cardBase.appendChild(identifier);
-    cardBase.appendChild(oldPrice);
+    cardBase.appendChild(imgProductoI);
+    cardBase.appendChild(cardTitleH);
+    cardBase.appendChild(identifierP);
+    cardBase.appendChild(oldPriceP);
     cardBase.appendChild(cardOrder);
 
 
@@ -76,19 +69,45 @@ function createCard() {
     imgPlus.alt = 'plus';
 
 
-    const newPrice = document.createElement('p');
-    newPrice.className = 'new-price';
-    newPrice.textContent = '$3924';
+    const newPriceP = document.createElement('p');
+    newPriceP.className = 'new-price';
+    newPriceP.textContent = newPrice;
 
 
     cardButtom.appendChild(imgBag);
     cardButtom.appendChild(imgPlus);
-    cardPrice.appendChild(newPrice);
+    cardPrice.appendChild(newPriceP);
 
 
     return card;
 }
 
+const cardData = [
+    {
+      imgProducto: 'images/productos/DestacadosDesktop.png',
+      desProducto: 'This is the content of Card 1.',
+      cardTitle: 'Titulo del primer producto',
+      identifier:'111',
+      oldPrice:'$10',
+      newPrice:'$234',
+    },
+    {
+        imgProducto: 'images/productos/DestacadosDesktop.png',
+        desProducto: 'This is the content of Card 1.',
+        identifier:'111',
+        oldPrice:'$10',
+        newPrice:'$23423',
+      },
+      {
+        imgProducto: 'images/productos/DestacadosDesktop.png',
+        desProducto: 'This is the content of Card 1.',
+        cardTitle: 'Titulo del tercer producto',
+        identifier:'111',
+        oldPrice:'$10',
+        newPrice:'$234',
+      },
+  ];
+  
 
 let cardContainer;
 
@@ -97,6 +116,8 @@ window.addEventListener("load", (event) => {
 
     cardContainer = document.getElementById('products');
 
-    const card = createCard(PRODUCTO_DESTACADO);
-    cardContainer.appendChild(card);
+    for (const data of cardData) {
+        const card = createCard(data);
+        cardContainer.appendChild(card);
+      }
 });

@@ -182,6 +182,12 @@ h2 {
 }
 
 
+.card-base .imgProductoI {
+    position: relative;
+    margin-left: 40px;
+}
+
+
 .imgHerramientaNovedades{
     margin-left: 20px;
     width: 150px;
