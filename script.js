@@ -1,17 +1,13 @@
 
 async function fetchProducts() {
   console.log("Init");
-
   const apiURL = "https://64f659ae2b07270f705e6753.mockapi.io/api/products";
   const apiResponse = await fetch(apiURL)
   const jsonData = await apiResponse.json();
   console.log(apiResponse.status);
-
   console.log(jsonData);
   return jsonData;
 }
-
-
 
 
 function createCard(product) {
@@ -19,10 +15,13 @@ function createCard(product) {
     image =  'images/productos/DestacadosDesktop.png',
     desProducto ='Alt producto' ,
     title = 'Nombre del producto' ,
-    identifier = 'identificador',    
+    id = 'identificador',    
     previousPrice = '$Precio Antiguo',
-    price = '$Precio Actual'   
+    price = '$Precio Actual',
+    onSale = '' ,
+    featured ='' 
     } = product;
+
 
     const card = document.createElement('div');
     card.className = 'card'; 
@@ -46,7 +45,7 @@ function createCard(product) {
 
     const identifierP = document.createElement('p');
     identifierP.className = 'identifier';
-    identifierP.textContent = identifier;
+    identifierP.textContent =`Identifier number ${id}`;
     
 
     const oldPriceP = document.createElement('p');
@@ -106,7 +105,7 @@ window.addEventListener("load", async (event) => {
 
     const products = await fetchProducts();
 
-    cardContainer = document.getElementById('products');
+    cardContainer = document.getElementById('productsDestacados');
 
     for (const data of products) {
         const card = createCard(data);

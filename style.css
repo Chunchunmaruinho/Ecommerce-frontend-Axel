@@ -44,19 +44,20 @@ main {
 }
 
 
-#products {
+#productsDestacados {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 18px;
 }
 
-.products {
+#productsOferta {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 18px;
-}
+} 
+
 
 
 
@@ -180,6 +181,7 @@ h2 {
     position: relative;
     margin-left: 40px;
     width: 202px;
+    height: 147px;
 }
 
 
@@ -226,6 +228,7 @@ h2 {
     text-transform: capitalize;
     margin-left: 20px;
     margin-right: 20px;
+    height: 48px;
 }
 
 
