@@ -45,14 +45,14 @@ main {
 
 
 #productsDestacados {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 285px 285px 285px 285px ;
     gap: 18px;
 }
 
 #productsOferta {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 285px 285px 285px 285px ;
     gap: 18px;
 } 
 
