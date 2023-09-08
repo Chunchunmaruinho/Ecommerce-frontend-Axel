@@ -10,17 +10,15 @@ async function fetchProducts() {
 }
 
 
-function createCard(product) {
+function createCard(defaultCard) {
     const {
     image =  'images/productos/DestacadosDesktop.png',
     desProducto ='Alt producto' ,
     title = 'Nombre del producto' ,
-    id = 'identificador',    
     previousPrice = '$Precio Antiguo',
     price = '$Precio Actual',
-    onSale = '' ,
-    featured ='' 
-    } = product;
+    id = 'identificador'
+    } = defaultCard;
 
 
     const card = document.createElement('div');
@@ -35,7 +33,7 @@ function createCard(product) {
     const imgProductoI = document.createElement('img');
     imgProductoI.className =  'imgProducto';  
     imgProductoI.src = image; 
-    image.alt = desProducto; 
+    imgProductoI.alt = desProducto; 
     
 
     const cardTitleH = document.createElement('h3');
@@ -98,17 +96,26 @@ function createCard(product) {
 }
   
 
-let cardContainer;
 
 window.addEventListener("load", async (event) => {
-    console.log("page is fully loaded");
+    console.log("page is fully loaded");    
 
     const products = await fetchProducts();
 
-    cardContainer = document.getElementById('productsDestacados');
+    const cardContainer1 = document.getElementById('productsDestacados');
+    const cardContainer2 = document.getElementById('productsOferta');
+    
+    products.forEach ((jsonData) => {
 
-    for (const data of products) {
-        const card = createCard(data);
-        cardContainer.appendChild(card);
+        if (jsonData.featured == true){
+          const card = createCard(jsonData);
+          cardContainer1.appendChild(card);
+         }
+       
+
+        if (jsonData.onSale == true){
+          const card = createCard(jsonData);
+          cardContainer2.appendChild(card);
       }
+  });
 });

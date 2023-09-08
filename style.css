@@ -47,14 +47,12 @@ main {
 #productsDestacados {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     gap: 18px;
 }
 
 #productsOferta {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     gap: 18px;
 } 
 
